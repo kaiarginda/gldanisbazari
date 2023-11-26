@@ -78,8 +78,8 @@
 // export default page;
 
 import React from "react";
-import Payment from "../../../models/Payment";
-import Product from "../../../models/Product";
+import Payment from "../../../models/Payment.js";
+import Product from "../../../models/Product.js";
 import Link from "next/link";
 import mongoose from "mongoose";
 
