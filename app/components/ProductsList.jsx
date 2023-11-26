@@ -232,17 +232,19 @@ const ProductsList = () => {
 
   useEffect(() => {
     setLoading(true);
-
-    fetch("/api/getproducts")
-      .then((res) => res.json())
-      .then((data) => {
-        setLoading(false);
-        setProductData(data);
-      })
-      .catch((error) => {
-        console.error("Error fetching products:", error);
-        setLoading(false);
-      });
+    const fetchData = async () => {
+      await fetch("/api/getproducts")
+        .then((res) => res.json())
+        .then((data) => {
+          setLoading(false);
+          setProductData(data);
+        })
+        .catch((error) => {
+          console.error("Error fetching products:", error);
+          setLoading(false);
+        });
+    };
+    fetchData;
   }, []);
 
   const [visibleProducts, setVisibleProducts] = useState(6);
