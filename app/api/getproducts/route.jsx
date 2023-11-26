@@ -1,5 +1,5 @@
 import { connectMongoDB } from "../../mongodb";
-import Product from "../../models/Product";
+import Product from "../../models/Product.js";
 import { NextRequest, NextResponse } from "next/server";
 export async function GET() {
   await connectMongoDB();
