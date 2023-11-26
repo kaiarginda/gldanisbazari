@@ -16,7 +16,7 @@ import mongoose from "mongoose";
 const MONGO_URI =
   "mongodb+srv://tornike:tornike@shopcluster.bqft7gb.mongodb.net/product?retryWrites=true&w=majority";
 
-const connectMongoDB = async () => {
+export const connectMongoDB = async () => {
   await mongoose.connect(MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -27,5 +27,3 @@ const connectMongoDB = async () => {
 
   console.log("DB connection successful!");
 };
-
-export default connectMongoDB;
