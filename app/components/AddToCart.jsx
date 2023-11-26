@@ -183,6 +183,7 @@
 // export default AddToCart;
 
 // Import the next/image component
+"use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
