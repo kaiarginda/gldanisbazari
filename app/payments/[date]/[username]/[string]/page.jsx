@@ -78,8 +78,11 @@
 // export default page;
 
 import React from "react";
-import Payment from "../../../models/Payment.js";
-import Product from "../../../models/Product.js";
+// import Payment from "../../../models/Payment.js";
+// import Product from "../../../models/Product.js";
+const Product = require("../../../../models/Product.js");
+const Payment = require("../../../../models/Payment.js");
+
 import Link from "next/link";
 import mongoose from "mongoose";
 
